@@ -1,0 +1,30 @@
+{
+  "name": "BIEPOnline",
+  "scripts": {
+    "postdeploy": "php artisan migrate:refresh"
+  },
+  "env": {
+    "APP_ENV": {
+      "required": true
+    },
+    "APP_KEY": {
+      "required": true
+    },
+    "DB_CONNECTION": {
+      "required": true
+    },
+    "DATABASE_URL": {
+      "required": true
+    }
+  },
+  "formation": {
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/php"
+    }
+  ]
+}
